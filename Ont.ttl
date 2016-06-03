@@ -7,53 +7,59 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix schema: <http://schema.org/> .
 @prefix eclap: <http://www.eclap.eu/schema/eclap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
-<http://www.theatersammlung.ch> rdf:type owl:Ontology ;
-                                                                
-        <http://purl.org/dc/elements/1.1/description> "TBD" 
-        <http://purl.org/dc/elements/1.1/title> "Schweizerische Theatersammlung Ontologie" ;
-        owl:versionInfo "asdf" .
-
-
-#################################################################
-#
-#    Annotation properties
-#
-#################################################################
-
-
-###  http://purl.org/dc/elements/1.1/description
-
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              
-                                              rdfs:label "dc:description" .
-
-
-
-###  http://purl.org/dc/elements/1.1/title
-
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty ;
-                                        
-                                        rdfs:label "dc:title" .
-
-
-
-
+<http://www.theatersammlung.ch> rdf:type owl:Ontology;
+        dc:title "Ontologie der Schweizerischer Theatersammlung";
+        dc:description> "This ontology specifies entities and parameters of the Theatre Domain, which are not provided externally"; 
+        owl:versionInfo "This is the first version of the ontology created by BFH Students".
 
 #################################################################
 #
-#    Object Properties
+#    Classes
 #
 #################################################################
 
+<Videoaufzeichnung> a rdfs:Class, owl:Class;
+        skos:prefLabel "Videoaufzeichnung einer Aufführung"@de;
+        rdfs:subClassOf eclap:Video;
+        skos:definition "TBD".
+      
+<Archivinformation> a rdfs:Class, owl:Class;
+        skos:prefLabel "Archivinformation"@de;
+        rdfs:subClassOf owl:Thing;
+        skos:definition "TBD".
 
-###  http://webprotege.stanford.edu/R03g3FF8GgbV0Vad7QJttZ
+<Theater> a rdfs:Class, owl:Class;
+        skos:prefLabel "Theater bzw. Veranstalter"@de;
+        rdfs:subClassOf schema:TheatreGroup;
+        skos:definition "TBD".
 
-<http://webprotege.stanford.edu/R03g3FF8GgbV0Vad7QJttZ> rdf:type owl:ObjectProperty ;
-                                                        
-                                                        rdfs:label "Präsentation" ;
-                                                        
-                                                        rdfs:subPropertyOf owl:topObjectProperty .
+<Aufführung> a rdfs:Class, owl:Class;
+        skos:prefLabel "Aufführung bzw. Produktion"@de;
+        rdfs:subClassOf owl:TheatreEvent;
+        skos:definition "TBD".
+
+<Spieltext> a rdfs:Class, owl:Class;
+        skos:prefLabel "Werk bzw. Spieltext"@de;
+        rdfs:subClassOf owl:Creativework;
+        skos:definition "TBD".
+
+<Medium> a rdfs:Class, owl:Class;
+        skos:prefLabel "Archiviertes Medium"@de;
+        rdfs:subClassOf dct:PhysicalMedium;
+        skos:definition "TBD".
+
+#################################################################
+#
+#    Properties
+#
+#################################################################
+
+<präsentation> rdf:type owl:ObjectProperty;
+        rdfs:label "Präsentation" ;
+        rdfs:subPropertyOf owl:topObjectProperty .
 
 
 
@@ -443,96 +449,4 @@
                                                         rdfs:label "Premierenart" ;
                                                         
                                                         rdfs:subPropertyOf owl:topDataProperty .
-
-
-
-
-
-#################################################################
-#
-#    Classes
-#
-#################################################################
-
-
-###  http://webprotege.stanford.edu/R4IZeKgzVXaz6JsryukYvl
-
-<http://webprotege.stanford.edu/R4IZeKgzVXaz6JsryukYvl> rdf:type owl:Class ;
-                                                        
-                                                        rdfs:label "Video" ;
-                                                        
-                                                        rdfs:subClassOf owl:Thing .
-
-
-
-###  http://webprotege.stanford.edu/R50pOcs8ADDYRPo3Y5pW8B
-
-<http://webprotege.stanford.edu/R50pOcs8ADDYRPo3Y5pW8B> rdf:type owl:Class ;
-                                                        
-                                                        rdfs:label "Archivinformation" ;
-                                                        
-                                                        rdfs:subClassOf owl:Thing .
-
-
-
-###  http://webprotege.stanford.edu/R7ppgGZ1d4hMl13DrqyT0IR
-
-<http://webprotege.stanford.edu/R7ppgGZ1d4hMl13DrqyT0IR> rdf:type owl:Class ;
-                                                         
-                                                         rdfs:label "Theater bzw. Veranstalter" ;
-                                                         
-                                                         rdfs:subClassOf owl:Thing .
-
-
-
-###  http://webprotege.stanford.edu/RimYTnrBeOyQLwFqei2JtS
-
-<http://webprotege.stanford.edu/RimYTnrBeOyQLwFqei2JtS> rdf:type owl:Class ;
-                                                        
-                                                        rdfs:label "Aufführung bzw. Produktion" ;
-                                                        
-                                                        rdfs:subClassOf owl:Thing .
-
-
-
-###  http://webprotege.stanford.edu/RoXnsiMNf0LkvhoiDtOuu4
-
-<http://webprotege.stanford.edu/RoXnsiMNf0LkvhoiDtOuu4> rdf:type owl:Class ;
-                                                        
-                                                        rdfs:label "Werk bzw. Spieltext" ;
-                                                        
-                                                        rdfs:subClassOf owl:Thing .
-
-
-
-###  http://webprotege.stanford.edu/Rv4J389V8it5RD9O0cVmfN
-
-<http://webprotege.stanford.edu/Rv4J389V8it5RD9O0cVmfN> rdf:type owl:Class ;
-                                                        
-                                                        rdfs:label "Medium" ;
-                                                        
-                                                        rdfs:subClassOf owl:Thing .
-
-
-
-
-
-#################################################################
-#
-#    Individuals
-#
-#################################################################
-
-
-###  http://webprotege.stanford.edu/RDQzQRP42pfVNbvm4WYHGqG
-
-<http://webprotege.stanford.edu/RDQzQRP42pfVNbvm4WYHGqG> rdf:type <http://webprotege.stanford.edu/RimYTnrBeOyQLwFqei2JtS> ,
-                                                                  owl:NamedIndividual ;
-                                                         
-                                                         rdfs:label "Mallorca bei Bern" .
-
-
-
-
-###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
 
