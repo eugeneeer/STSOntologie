@@ -77,7 +77,7 @@
         rdfs:range schema:Person.
 
 <tontechnik> a rdf:Property;
-        skos:prefLabel "Tontechniker"@de;
+        skos:prefLabel "Tontechnik"@de;
         rdfs:domain <Videoaufzeichnung>;
         skos:definition "TBD";
         rdfs:range schema:Person.
@@ -118,13 +118,6 @@
         skos:definition "TBD";
         rdfs:range schema:Organisation.
 
-<produktionsleitung> a rdf:Property;
-        skos:prefLabel "Produktionsleitung"@de;
-        rdfs:subPropertyOf <leitung>;
-        rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
-        rdfs:range schema:Person.
-
 <nachfolgemedium> a rdf:Property;
         skos:prefLabel "Nachfolgemedium"@de;
         rdfs:domain <Medium>;
@@ -146,12 +139,6 @@
 
 <moderation> a rdf:Property;
         skos:prefLabel "Moderation"@de;
-        rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
-        rdfs:range schema:Person.
-
-<ton> a rdf:Property;
-        skos:prefLabel "Ton"@de;
         rdfs:domain <Videoaufzeichnung>;
         skos:definition "TBD";
         rdfs:range schema:Person.
