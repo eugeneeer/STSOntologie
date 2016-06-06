@@ -11,8 +11,8 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <http://www.theatersammlung.ch> a owl:Ontology;
-        dc:title "Ontologie der Schweizerischer Theatersammlung";
-        dc:description> "This ontology specifies entities and parameters of the Theatre Domain, which are not provided externally"; 
+        dc:title "Ontologie der Darstellende Künste (Schweizerische Theatersammlung)";
+        dc:description "This ontology specifies entities and parameters of the Theatre Domain, which are not provided externally"; 
         owl:versionInfo "This is the first version of the ontology created by BFH Students".
 
 #################################################################
@@ -21,32 +21,32 @@
 #
 #################################################################
 
-<Videoaufzeichnung> a rdfs:Class, owl:Class;
+<Videoaufzeichnung> a owl:Class;
         skos:prefLabel "Videoaufzeichnung einer Aufführung"@de;
         rdfs:subClassOf eclap:Video;
         skos:definition "TBD".
       
-<Archivinformation> a rdfs:Class, owl:Class;
+<Archivinformation> a owl:Class;
         skos:prefLabel "Archivinformation"@de;
         rdfs:subClassOf owl:Thing;
         skos:definition "TBD".
 
-<Theater> a rdfs:Class, owl:Class;
+<Theater> a owl:Class;
         skos:prefLabel "Theater bzw. Veranstalter"@de;
         rdfs:subClassOf schema:TheatreGroup;
         skos:definition "TBD".
 
-<Aufführung> a rdfs:Class, owl:Class;
+<Aufführung> a owl:Class;
         skos:prefLabel "Aufführung bzw. Produktion"@de;
         rdfs:subClassOf owl:TheatreEvent;
         skos:definition "TBD".
 
-<Spieltext> a rdfs:Class, owl:Class;
+<Spieltext> a owl:Class;
         skos:prefLabel "Werk bzw. Spieltext"@de;
         rdfs:subClassOf owl:Creativework;
         skos:definition "TBD".
 
-<Medium> a rdfs:Class, owl:Class;
+<Medium> a owl:Class;
         skos:prefLabel "Archiviertes Medium"@de;
         rdfs:subClassOf dct:PhysicalMedium;
         skos:definition "TBD".
