@@ -24,32 +24,32 @@
 <Videoaufzeichnung> a owl:Class;
         skos:prefLabel "Videoaufzeichnung einer Aufführung"@de;
         rdfs:subClassOf eclap:Video;
-        skos:definition "TBD".
+        skos:definition "Videofile mit der Aufzeichnung der Aufführung".
       
 <Archivinformation> a owl:Class;
         skos:prefLabel "Archivinformation"@de;
         rdfs:subClassOf owl:Thing;
-        skos:definition "TBD".
+        skos:definition "Charakterisiert Archivbestände für eine bestimmte Aufführung bei der Schweizerischen Theatersammlung".
 
 <Theater> a owl:Class;
         skos:prefLabel "Theater bzw. Veranstalter"@de;
         rdfs:subClassOf schema:TheatreGroup;
-        skos:definition "TBD".
+        skos:definition "Theater als Organisaion bzw. Instituation".
 
 <Aufführung> a owl:Class;
         skos:prefLabel "Aufführung bzw. Produktion"@de;
         rdfs:subClassOf owl:TheatreEvent;
-        skos:definition "TBD".
+        skos:definition "Es handelt sich um eine Premiere aus den Repertorien der Schweizerischen Theatersammlung".
 
 <Spieltext> a owl:Class;
         skos:prefLabel "Werk bzw. Spieltext"@de;
         rdfs:subClassOf owl:Creativework;
-        skos:definition "TBD".
+        skos:definition "Ein Werk, auf dem eine Aufführung basiert".
 
 <Medium> a owl:Class;
         skos:prefLabel "Archiviertes Medium"@de;
         rdfs:subClassOf dct:PhysicalMedium;
-        skos:definition "TBD".
+        skos:definition "Physisches Medium, das die Videoaufzeichung beinhaltet".
 
 #################################################################
 #
@@ -60,111 +60,111 @@
 <präsentation> a rdf:Property;
         skos:prefLabel "Verantwortlicher für die Präsentation"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Präsentation verantwortlich ist";
         rdfs:range schema:Person.
 
 <technischeLeitung> a rdf:Property;
         skos:prefLabel "Technische Leitung"@de;
         rdfs:subPropertyOf <leitung>;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die die Technische Leitung übernimmt";
         rdfs:range schema:Person.
 
 <projektion> a rdf:Property;
         skos:prefLabel "Verantwortlicher für die Projektion"@de;
         rdfs:domain <Aufführung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Projektion verantwortlich ist";
         rdfs:range schema:Person.
 
 <tontechnik> a rdf:Property;
         skos:prefLabel "Tontechnik"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Tontechnik verantwortlich ist";
         rdfs:range schema:Person.
 
 <plakat> a rdf:Property;
         skos:prefLabel "Plakat"@de;
         rdfs:domain <Aufführung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für das Plakat verantwortlich ist";
         rdfs:range schema:Person.
 
 <leitung> a rdf:Property;
         skos:prefLabel "Leitung"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Leitung verantwortlich ist";
         rdfs:range schema:Person.
 
 <kamera> a rdf:Property;
         skos:prefLabel "Kamera"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für Aufzeichung verantwortlich ist";
         rdfs:range schema:Person.
 
 <fernsehbearbeitung> a rdf:Property;
         skos:prefLabel "Fernsehbearbetung"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Fernsehbearbeitung verantwortlich ist";
         rdfs:range schema:Person.
 
 <chorleitung> a rdf:Property;
         skos:prefLabel "Chorleitung"@de;
         rdfs:domain <Aufführung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Leitung des Chores verantwortlich ist";
         rdfs:range schema:Person.
         
 <herkunftSenderanstalt> a rdf:Property;
         skos:prefLabel "Herkunft Senderanstalt"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Hierbei handelt es sich um die Herkunftsangabe des Videomaterials wenn es sich nicht um einen Mitschnitt einer Sendeanstalt handelt";
         rdfs:range schema:Organisation.
 
 <nachfolgemedium> a rdf:Property;
         skos:prefLabel "Nachfolgemedium"@de;
         rdfs:domain <Medium>;
-        skos:definition "TBD";
+        skos:definition "Nächstes Physisches Medium, auf welchem die Fortsetzung der Aufzeichnung gespeichert ist";
         rdfs:range dct:PhysicalMedium.
 
 <aufnahmeleitung> a rdf:Property;
         skos:prefLabel "Aufnahmeleitung"@de;
         rdfs:subPropertyOf <leitung>;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Leitung der Aufnahme verantwortlich ist";
         rdfs:range schema:Person.
 
 <theatersaion> a rdf:Property;
         skos:prefLabel "Theatersaison"@de;
         rdfs:domain <Aufführung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Theatersaison, in welcher die Aufführung stattgefunden hat";
         rdfs:range <Theatersaison>.
 
 <moderation> a rdf:Property;
         skos:prefLabel "Moderation"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für die Moderation verantwortlich ist";
         rdfs:range schema:Person.
         
 <schnitt> a rdf:Property;
         skos:prefLabel "Schnitt"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die für den Schnitt verantwortlich ist";
         rdfs:range schema:Person.
         
 <bildregie> a rdf:Property;
         skos:prefLabel "Bildregie"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die eine Rolle der Bildregie übernimmt";
         rdfs:range schema:Person.
         
 <drehbuch> a rdf:Property;
         skos:prefLabel "Drehbuch"@de;
         rdfs:domain <Videoaufzeichnung>;
-        skos:definition "TBD";
+        skos:definition "Referenz zur Person, die das Drehbuch verfasst hat";
         rdfs:range schema:Person.
         
 <theatersaisons> a rdf:Property;
         skos:prefLabel "Theatersaisons"@de;
         rdfs:domain <Theater>;
-        skos:definition "TBD";
+        skos:definition "Referenz zu Theatersaions";
         rdfs:range <Theatersaison>.       
         
 #################################################################
@@ -175,80 +175,80 @@
 
 <anzahlNegative> a rdf:Property;
         skos:prefLabel "Anzahl Negative"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt es sich hier um eine numerische Angabe zur Anzahl der vorhandenen Negative von Fotos.";
         rdfs:domain <Archivinformation>.
 
 <diverseMaterialien> a rdf:Property;
         skos:prefLabel "Diverse Materialien?"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt sich hier um die Angabe ob Presseausschnitte dazu existieren. Dies kann entsprechend bejaht oder negiert werden.";
         rdfs:domain <Archivinformation>.
 
 <anzahlVorstellungen> a rdf:Property;
         skos:prefLabel "Anzahl Vorstellungen"@de;
-        skos:definition "TBD";
+        skos:definition "Dies gibt die Anzahl der Vorstellungen während der angegebenen Spielzeit in Form einer Zahl wieder";
         rdfs:domain <Archivinformation>.
         
 <anzahlBilder> a rdf:Property;
         skos:prefLabel "Anzahl Bilder"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt sich hierbei um die numerische Angabe der Anzahl der Bilder";
         rdfs:domain <Spieltext>.
         
 <anzahlDias> a rdf:Property;
         skos:prefLabel "Anzahl Dias"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt es sich hier um eine numerische Angabe zur Anzahl der vorhandenen Dias";
         rdfs:domain <Archivinformation>.
         
 <anzahlFotos> a rdf:Property;
         skos:prefLabel "Anzahl Fotos"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt es sich hier um eine numerische Angabe zur Anzahl der vorhandenen Abzüge der Fotos";
         rdfs:domain <Archivinformation>.
         
 <presse> a rdf:Property;
         skos:prefLabel "Presse?"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt sich hier um die Angabe ob Presseausschnitte dazu existieren. Dies kann entsprechend bejaht oder negiert werden";
         rdfs:domain <Archivinformation>.
 
 <originaltitel> a rdf:Property;
         skos:prefLabel "Originaltitel"@de;
-        skos:definition "TBD";
+        skos:definition "Hier handelt es sich um den Originaltitel (in der Originalsprache) des Werkes welches Grundlage für die Aufführung ist";
         rdfs:domain <Spielzext>.
 
 <anzahlBühnenbildermodelle> a rdf:Property;
         skos:prefLabel "Anzahl Bühnenbildermodelle"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt es sich hier um eine numerische Angabe zur Anzahl der vorhandenen Bühnenbildermodelle";
         rdfs:domain <Archivinformation>.
 
 <anzahlBühnenbilderentwurfe> a rdf:Property;
         skos:prefLabel "Anzahl Bühnenbilderentwurfe"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt es sich hier um eine numerische Angabe zur Anzahl der vorhandenen Bühnenbilderentwürfe";
         rdfs:domain <Archivinformation>.
 
 <signatur> a rdf:Property;
         skos:prefLabel "Signatur"@de;
-        skos:definition "TBD";
+        skos:definition "Hierbei handelt es sich um die Signatur des Mediums";
         rdfs:domain <Medium>.
 
 <plakatSignatur> a rdf:Property;
         skos:prefLabel "Plakatsignatur"@de;
-        skos:definition "TBD";
+        skos:definition "Hierbei handelt es sich um die Signatur des Plakats.";
         rdfs:domain <Archivinformation>.
 
 <aVMaterialienSignatur> a rdf:Property;
         skos:prefLabel "AV Materialien Signatur"@de;
-        skos:definition "TBD";
+        skos:definition "Hierbei handelt es sich um die Signatur des AV Materials";
         rdfs:domain <Archivinformation>.
 
 <programmheft> a rdf:Property;
         skos:prefLabel "Programmheft?"@de;
-        skos:definition "TBD";
+        skos:definition "Es handelt sich hier um die Angabe ob ein Programmheft dazu existiert. Dies kann entsprechend bejaht oder negiert werden.";
         rdfs:domain <Archivinformation>.
         
 <anzahlAkten> a rdf:Property;
         skos:prefLabel "Anzahl Akten"@de;
-        skos:definition "TBD";
+        skos:definition "Anzahl von Akten in einem Werk";
         rdfs:domain <Spieltext>.       
         
 <premierenart> a rdf:Property;
         skos:prefLabel "Premierenart"@de;
-        skos:definition "TBD";
+        skos:definition "Hier handelt es sich um eine Angabe zur Art der Premiere";
         rdfs:domain <Auffürhung>.  
